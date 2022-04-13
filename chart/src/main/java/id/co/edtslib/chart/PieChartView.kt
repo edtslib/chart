@@ -1,4 +1,4 @@
-package id.co.edtslib.chart.pie
+package id.co.edtslib.chart
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,11 +7,10 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.widget.FrameLayout
-import id.co.edtslib.chart.R
 
 
 open class PieChartView : FrameLayout {
-    var listener:  PieChartListener? = null
+    var listener:  EdtsChartListener? = null
     var showLabel = true
     var labelColor = Color.WHITE
     var labelSize = 0f
@@ -25,13 +24,6 @@ open class PieChartView : FrameLayout {
 
     private var percents: MutableList<Float>? = null
     protected open fun drawAddition(canvas: Canvas?) {}
-
-    companion object {
-        var colors = arrayListOf(Color.parseColor("#9C9DA6"),
-            Color.parseColor("#1178D4"),
-            Color.parseColor("#6CA5E0"),
-            Color.parseColor("#FFA800"))
-    }
 
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
@@ -143,7 +135,7 @@ open class PieChartView : FrameLayout {
                 paths.add(path)
 
                 paint.style = Paint.Style.FILL
-                paint.color = colors[i% colors.size]
+                paint.color = EdtsChart.colors[i% EdtsChart.colors.size]
 
                 canvas?.drawPath(path, paint)
 

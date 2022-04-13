@@ -1,4 +1,4 @@
-package id.co.edtslib.chart.donut
+package id.co.edtslib.chart
 
 import android.content.Context
 import android.graphics.Canvas
@@ -8,7 +8,7 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
-import id.co.edtslib.chart.pie.PieChartView
+import id.co.edtslib.chart.PieChartView
 
 class DonutChartView: PieChartView {
     private val wDonut = 100f

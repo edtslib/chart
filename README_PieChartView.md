@@ -71,7 +71,7 @@ An example is shown below.
 
 Using static variable to define your colors. For example
 ```kotlin
-PieChartView.colors = arrayListOf(
+EdtsChart.colors = arrayListOf(
             Color.parseColor("#9C9DA6"),
             Color.parseColor("#1178D4"),
             Color.parseColor("#6CA5E0"),
@@ -80,7 +80,7 @@ PieChartView.colors = arrayListOf(
 
 ### Listener when input completed
 ```kotlin
-    interface PieChartListener {
+    interface EdtsChartListener {
     // index of data
     fun onClick(index: Int)
 }
@@ -88,7 +88,7 @@ PieChartView.colors = arrayListOf(
 
 For example
 ```kotlin
-chartView.listener = object : PieChartListener {
+chartView.listener = object : EdtsChartListener {
     override fun onClick(index: Int) {
         toast?.cancel()
         toast = Toast.makeText(this@MainActivity, "Percent ${percents[index]}", Toast.LENGTH_SHORT)

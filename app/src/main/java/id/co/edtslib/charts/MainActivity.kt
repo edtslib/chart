@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
-import id.co.edtslib.chart.donut.DonutChartView
-import id.co.edtslib.chart.pie.PieChartListener
-import id.co.edtslib.chart.pie.PieChartView
+import id.co.edtslib.chart.DonutChartView
+import id.co.edtslib.chart.EdtsChartListener
 
 class MainActivity : AppCompatActivity() {
     private var toast: Toast? = null
@@ -27,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val percents = mutableListOf(45f, 19f, 14f, 22f)
         chartView.setPercent(percents)
-        chartView.listener = object : PieChartListener {
+        chartView.listener = object : EdtsChartListener {
             override fun onClick(index: Int) {
                 toast?.cancel()
 
