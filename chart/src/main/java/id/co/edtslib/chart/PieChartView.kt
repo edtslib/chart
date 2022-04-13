@@ -26,7 +26,7 @@ open class PieChartView : FrameLayout {
     protected open fun drawAddition(canvas: Canvas?) {}
 
     companion object {
-        val colors = arrayListOf(Color.parseColor("#9C9DA6"),
+        var colors = arrayListOf(Color.parseColor("#9C9DA6"),
             Color.parseColor("#1178D4"),
             Color.parseColor("#6CA5E0"),
             Color.parseColor("#FFA800"))
@@ -67,7 +67,7 @@ open class PieChartView : FrameLayout {
         }
     }
 
-    fun setData(values: List<Float>) {
+    fun setValues(values: List<Float>) {
         percents = mutableListOf()
 
         var total = 0f
