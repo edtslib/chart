@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 
 
 open class PieChartView : FrameLayout {
-    var listener:  PiChartListener? = null
+    var listener:  PieChartListener? = null
     var showLabel = true
     var labelColor = Color.WHITE
     var labelSize = 0f

@@ -3,7 +3,7 @@ package id.co.edtslib.charts
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import id.co.edtslib.chart.PiChartListener
+import id.co.edtslib.chart.PieChartListener
 import id.co.edtslib.chart.PieChartView
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val percents = mutableListOf(45f, 19f, 14f, 22f)
         chartView.setPercent(percents)
-        chartView.listener = object : PiChartListener {
+        chartView.listener = object : PieChartListener {
             override fun onClick(index: Int) {
                 toast?.cancel()
 

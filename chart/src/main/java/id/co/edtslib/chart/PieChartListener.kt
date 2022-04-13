@@ -1,5 +1,5 @@
 package id.co.edtslib.chart
 
-interface PiChartListener {
+interface PieChartListener {
     fun onClick(index: Int)
 }
