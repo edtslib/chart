@@ -108,7 +108,9 @@ open class PieChartView : FrameLayout {
                     val rectF = RectF()
                     path.computeBounds(rectF, true)
                     if (x >= rectF.left && x <= rectF.right && y >= rectF.top && y <= rectF.bottom) {
-                        listener?.onClick(i)
+                        if (isValidPoint(x, y)) {
+                            listener?.onClick(i)
+                        }
                     }
                 }
             }
@@ -121,6 +123,8 @@ open class PieChartView : FrameLayout {
         drawX(canvas)
 
     }
+
+    protected open fun isValidPoint(x: Float, y: Float) = true
 
     protected open fun drawX(canvas: Canvas?) {
         paths.clear()
