@@ -78,7 +78,7 @@ PieChartView.colors = arrayListOf(
             Color.parseColor("#FFA800"))
 ```
 
-### Listener when input completed
+### Listener when user click
 ```kotlin
     interface PieChartListener {
         // index of data
