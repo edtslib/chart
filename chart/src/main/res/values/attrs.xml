@@ -1,0 +1,10 @@
+<resources>
+    <declare-styleable name="PieChartView">
+        <attr name="showLabel" format="boolean" />
+        <attr name="labelColor" format="color" />
+        <attr name="labelSize" format="dimension" />
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
+
+    </declare-styleable>
+</resources>
