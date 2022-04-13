@@ -1,4 +1,4 @@
-package id.co.edtslib.chart
+package id.co.edtslib.chart.pie
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -7,6 +7,7 @@ import android.util.AttributeSet
 import android.util.TypedValue
 import android.view.MotionEvent
 import android.widget.FrameLayout
+import id.co.edtslib.chart.R
 
 
 open class PieChartView : FrameLayout {
@@ -121,7 +122,7 @@ open class PieChartView : FrameLayout {
 
     }
 
-    private fun drawX(canvas: Canvas?) {
+    protected open fun drawX(canvas: Canvas?) {
         paths.clear()
         if (percents?.isNotEmpty() == true) {
 
@@ -138,7 +139,7 @@ open class PieChartView : FrameLayout {
                 paths.add(path)
 
                 paint.style = Paint.Style.FILL
-                paint.color = colors[i%colors.size]
+                paint.color = colors[i% colors.size]
 
                 canvas?.drawPath(path, paint)
 

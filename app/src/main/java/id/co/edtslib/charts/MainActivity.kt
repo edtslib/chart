@@ -3,8 +3,8 @@ package id.co.edtslib.charts
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import id.co.edtslib.chart.PieChartListener
-import id.co.edtslib.chart.PieChartView
+import id.co.edtslib.chart.pie.PieChartListener
+import id.co.edtslib.chart.pie.PieChartView
 
 class MainActivity : AppCompatActivity() {
     private var toast: Toast? = null

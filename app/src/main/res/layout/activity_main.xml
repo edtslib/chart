@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <id.co.edtslib.chart.PieChartView
+    <id.co.edtslib.chart.donut.DonutChartView
         android:id="@+id/chartView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"

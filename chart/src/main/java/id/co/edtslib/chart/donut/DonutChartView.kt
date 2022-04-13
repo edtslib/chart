@@ -1,9 +1,10 @@
-package id.co.edtslib.chart
+package id.co.edtslib.chart.donut
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
 import android.util.AttributeSet
+import id.co.edtslib.chart.pie.PieChartView
 
 class DonutChartView: PieChartView {
     private val wDonut = 100f
@@ -15,6 +16,11 @@ class DonutChartView: PieChartView {
         attrs,
         defStyleAttr
     )
+
+    override fun drawX(canvas: Canvas?) {
+        showLabel = false
+        super.drawX(canvas)
+    }
 
     override fun drawAddition(canvas: Canvas?) {
         paint.color = Color.WHITE

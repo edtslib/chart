@@ -1,3 +1,5 @@
+[PieChartView](#piechartview)
+
 # PieChartView
 
 ![PieChartView](https://i.ibb.co/F6VdTY0/Screen-Shot-2022-04-13-at-16-29-29.png)
@@ -78,26 +80,21 @@ PieChartView.colors = arrayListOf(
             Color.parseColor("#FFA800"))
 ```
 
-### Listener when user click
+### Listener when input completed
 ```kotlin
     interface PieChartListener {
-        // index of data
-        fun onClick(index: Int)
-    }
+    // index of data
+    fun onClick(index: Int)
+}
 ```
 
 For example
 ```kotlin
 chartView.listener = object : PieChartListener {
-            override fun onClick(index: Int) {
-                toast?.cancel()
-                toast = Toast.makeText(this@MainActivity, "Percent ${percents[index]}", Toast.LENGTH_SHORT)
-                toast?.show()
-            }
-        }
+    override fun onClick(index: Int) {
+        toast?.cancel()
+        toast = Toast.makeText(this@MainActivity, "Percent ${percents[index]}", Toast.LENGTH_SHORT)
+        toast?.show()
+    }
+}
 ```
-
-
-
-
-
