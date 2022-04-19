@@ -5,6 +5,20 @@
         <attr name="labelSize" format="dimension" />
         <attr name="borderWidth" format="dimension" />
         <attr name="borderColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="BarChartView">
+        <attr name="fullWidth" format="boolean" />
+        <attr name="barSpacing" format="dimension" />
+        <attr name="barSize" format="dimension" />
+        <attr name="barColor" format="color" />
+        <attr name="xLabelColor" format="color" />
+        <attr name="xLabelSize" format="dimension" />
+        <attr name="xShowLabel" format="boolean" />
+        <attr name="xLabelMargin" format="dimension" />
+        <attr name="valueColor" format="color" />
+        <attr name="valueSize" format="dimension" />
+        <attr name="valueMargin" format="dimension" />
+        <attr name="showValue" format="boolean" />
 
     </declare-styleable>
 </resources>
