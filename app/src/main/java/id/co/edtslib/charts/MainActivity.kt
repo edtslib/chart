@@ -1,10 +1,8 @@
 package id.co.edtslib.charts
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import android.widget.Toast
 import id.co.edtslib.chart.*
 
@@ -16,8 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val donutChartView = findViewById<DonutChartView>(R.id.donut)
-        donutChartView.setData(listOf(
+        val pieChart = findViewById<PieChartView>(R.id.pieChart)
+        pieChart.setData(listOf(
             ChartData("Mushrooms", 3.0),
             ChartData("Onions", 1.0),
             ChartData("Olives", 1.0),

@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import com.google.gson.Gson
 
-class DonutChartView: EdtsChartView {
+class PieChartView: EdtsChartView {
     constructor(context: Context) : super(context)
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(

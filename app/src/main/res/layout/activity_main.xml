@@ -9,8 +9,8 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <id.co.edtslib.chart.DonutChartView
-            android:id="@+id/donut"
+        <id.co.edtslib.chart.PieChartView
+            android:id="@+id/pieChart"
             android:layout_width="match_parent"
             android:layout_height="400dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
