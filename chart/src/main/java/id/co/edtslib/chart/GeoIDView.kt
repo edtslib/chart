@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import com.google.gson.Gson
 
-open class PieChartView: EdtsChartView {
+open class GeoIDView: EdtsChartView {
     var hole = 0.0
     var fontSize = 0.0
 
@@ -17,18 +17,15 @@ open class PieChartView: EdtsChartView {
     )
 
     fun setData(chartData: List<ChartData>) {
-        val sShowLegend = if (showLegend) "" else "legend: 'none',"
-        val sHole = "pieHole: $hole,"
-        val sFontSize = if (fontSize == 0.0) "" else "pieSliceTextStyle: { fontSize: $fontSize,}"
 
         val json = Gson().toJson(listChartDataToArray(chartData))
         val drawChart = "" +
                 "var data = new google.visualization.DataTable();" +
-                "data.addColumn('string', 'col1');" +
-                "javascript:data.addColumn('number', 'col2');" +
+                "data.addColumn('string', 'City');" +
+                "data.addColumn('number', 'col2');" +
                 String.format("javascript:data.addRows(%s);", json) +
-                "var options = {$sShowLegend $sHole $sFontSize};" +
-                "var chart = new google.visualization.PieChart(document.getElementById('dvChart'));" +
+                "var options = {region: 'ID', displayMode: 'regions', resolution: 'provinces', };" +
+                "var chart = new google.visualization.GeoChart(document.getElementById('dvChart'));" +
                 "chart.draw(data, options);"
 
         loadHtml(drawChart)

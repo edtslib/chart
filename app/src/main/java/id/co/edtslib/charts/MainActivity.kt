@@ -21,5 +21,21 @@ class MainActivity : AppCompatActivity() {
             ChartData("Olives", 1.0),
             ChartData("Zucchini", 1.0),
             ChartData("Pepperoni", 2.0)))
+
+        val donutChart = findViewById<PieChartView>(R.id.donutChart)
+        donutChart.setData(listOf(
+            ChartData("Work", 11.0),
+            ChartData("Eat", 2.0),
+            ChartData("Commute", 2.0),
+            ChartData("Watch TV", 2.0),
+            ChartData("Sleep", 7.0)))
+
+        val geoId = findViewById<GeoIDView>(R.id.geoId)
+        geoId.setData(listOf(
+            ChartData("ID-JK", 580.0),
+            ChartData("ID-BA", 103.0),
+            ChartData("ID-JB", 239.0),
+            ChartData("ID-BT", 78.0),
+            ChartData("ID-JT", 78.0)))
     }
 }

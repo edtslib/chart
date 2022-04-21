@@ -27,7 +27,7 @@ abstract class EdtsChartView: WebView {
     protected fun loadHtml(fDrawChart: String) {
         val html = "<html>\n" +
                 "    <head>\n" +
-                "        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n" +
+                "        <meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width\">\n" +
                 "        <script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\n" +
                 "        <script type=\"text/javascript\">\n" +
                 "           google.charts.load('current', {'packages':['corechart', 'geochart']});" +
@@ -37,7 +37,7 @@ abstract class EdtsChartView: WebView {
                 "           } " +
                 "        </script>\n" +
                 "    </head>\n" +
-                "<body><div id='dvChart' style='width: 100%; height: 100%;'></body>" +
+                "<body style='margin:0;padding:0;'><div id='dvChart' style='width: 100%; height: 100%; margin: 0px;'></body>" +
                 "</html>"
         loadData(html, "text/html", "UTF-8")
 
