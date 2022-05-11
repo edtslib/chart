@@ -1,6 +1,4 @@
-# Edts Chart
-
-![Pie](https://i.ibb.co/30KkX2W/Screen-Shot-2022-04-13-at-17-22-27.png)
+![Edts Chart](https://i.ibb.co/LCZ0HBL/2022-05-11-11-27-05.jpg)
 ## Setup
 ### Gradle
 
@@ -20,16 +18,7 @@ dependencies {
 ```
 # PieChartView
 
-The PieChartView is very easy to use. Just add it to your layout like any other view.
-
-```xml
-        <id.co.edtslib.chart.PieChartView
-            android:id="@+id/pieChart"
-            android:layout_width="match_parent"
-            android:layout_height="400dp" />
-```
-
-And set data like this
+### Usage
 
 ```kotlin
         val pieChart = findViewById<PieChartView>(R.id.pieChart)
@@ -41,3 +30,43 @@ And set data like this
             ChartData("Pepperoni", 2.0)))
 ```
 
+# DonutChartView
+### Usage
+
+```kotlin
+        val donutChart = findViewById<PieChartView>(R.id.donutChart)
+        donutChart.setData(listOf(
+            ChartData("Work", 11.0),
+            ChartData("Eat", 2.0),
+            ChartData("Commute", 2.0),
+            ChartData("Watch TV", 2.0),
+            ChartData("Sleep", 7.0)))
+```
+
+# GeoIDView
+
+### Usage
+
+```kotlin
+       val geoId = findViewById<GeoIDView>(R.id.geoId)
+        geoId.setData(listOf(
+            ChartData("ID-JK", 580.0),
+            ChartData("ID-BA", 103.0),
+            ChartData("ID-JB", 239.0),
+            ChartData("ID-BT", 78.0),
+            ChartData("ID-JT", 78.0)))
+```
+
+# GeoView
+
+### Usage
+
+```kotlin
+        val geo = findViewById<GeoView>(R.id.geo)
+        geo.setData(listOf(
+            ChartData("Europe", 580.0),
+            ChartData("Asia", 103.0),
+            ChartData("Africa", 239.0),
+            ChartData("Oceania", 78.0),
+            ChartData("Americas", 78.0)))
+```
