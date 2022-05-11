@@ -37,5 +37,13 @@ class MainActivity : AppCompatActivity() {
             ChartData("ID-JB", 239.0),
             ChartData("ID-BT", 78.0),
             ChartData("ID-JT", 78.0)))
+
+        val geo = findViewById<GeoView>(R.id.geo)
+        geo.setData(listOf(
+            ChartData("Europe", 580.0),
+            ChartData("Asia", 103.0),
+            ChartData("Africa", 239.0),
+            ChartData("Oceania", 78.0),
+            ChartData("Americas", 78.0)))
     }
 }
