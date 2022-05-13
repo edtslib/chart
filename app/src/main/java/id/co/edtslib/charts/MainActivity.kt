@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
             ChartData("Sleep", 7.0)))
 
         val geoId = findViewById<GeoIDView>(R.id.geoId)
-        geoId.setData(listOf(
+        geoId.setData("Popularity", listOf(
             ChartData("ID-JK", 580.0),
             ChartData("ID-BA", 103.0),
             ChartData("ID-JB", 239.0),

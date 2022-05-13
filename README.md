@@ -17,7 +17,7 @@ dependencies {
 ```
 # GeoView
 
-![GeoView](https://i.ibb.co/nr80L7z/Screen-Shot-2022-05-13-at-13-03-09.png)
+![GeoView](https://i.ibb.co/nmR4DSd/geo.jpg)
 
 ### Usage
 ```xml
@@ -37,6 +37,28 @@ dependencies {
             ChartData("Brazil", 1000.0)))
 ```
 
+# GeoIDView
+
+![GeoIDView](https://i.ibb.co/Lv7JN7j/geoid.jpg)
+
+### Usage
+
+```xml
+        <id.co.edtslib.chart.GeoIDView
+            android:id="@+id/geoId"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+```
+
+```kotlin
+       val geoId = findViewById<GeoIDView>(R.id.geoId)
+        geoId.setData("Popularity", listOf(
+            ChartData("ID-JK", 580.0),
+            ChartData("ID-BA", 103.0),
+            ChartData("ID-JB", 239.0),
+            ChartData("ID-BT", 78.0),
+            ChartData("ID-JT", 78.0)))
+```
 
 # PieChartView
 
@@ -65,18 +87,6 @@ dependencies {
             ChartData("Sleep", 7.0)))
 ```
 
-# GeoIDView
 
-### Usage
-
-```kotlin
-       val geoId = findViewById<GeoIDView>(R.id.geoId)
-        geoId.setData(listOf(
-            ChartData("ID-JK", 580.0),
-            ChartData("ID-BA", 103.0),
-            ChartData("ID-JB", 239.0),
-            ChartData("ID-BT", 78.0),
-            ChartData("ID-JT", 78.0)))
-```
 
 

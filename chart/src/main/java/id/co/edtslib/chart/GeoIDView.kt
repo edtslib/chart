@@ -13,17 +13,18 @@ open class GeoIDView: EdtsChartView {
         defStyleAttr
     )
 
-    fun setData(chartData: List<ChartData>) {
+    fun setData(label: String, chartData: List<ChartData>) {
 
-        val json = Gson().toJson(listChartDataToArray(chartData))
-        val drawChart = "" +
-                "var data = new google.visualization.DataTable();" +
-                "data.addColumn('string', 'City');" +
-                "data.addColumn('number', 'col2');" +
-                String.format("javascript:data.addRows(%s);", json) +
-                "var options = {region: 'ID', displayMode: 'regions', resolution: 'provinces', };" +
-                "var chart = new google.visualization.GeoChart(document.getElementById('dvChart'));" +
-                "chart.draw(data, options);"
+        val json = Gson().toJson(listChartDataToArray(chartData)).substring(1)
+        val json1 = json.substring(0, json.length-1)
+
+        val drawChart = "var data = google.visualization.arrayToDataTable([" +
+                "          ['Province', '$label']," +
+                json1 +
+                "        ]);" +
+                "        var options = {region: 'ID', displayMode: 'regions', resolution: 'provinces', colorAxis: {colors: ['blue']}};" +
+                "        var chart = new google.visualization.GeoChart(document.getElementById('dvChart'));" +
+                "        chart.draw(data, options);"
 
         loadHtml(drawChart)
     }
