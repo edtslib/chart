@@ -13,17 +13,18 @@ open class GeoView: EdtsChartView {
         defStyleAttr
     )
 
-    fun setData(chartData: List<ChartData>) {
+    fun setData(label: String, chartData: List<ChartData>) {
 
-        val json = Gson().toJson(listChartDataToArray(chartData))
-        val drawChart = "" +
-                "var data = new google.visualization.DataTable();" +
-                "data.addColumn('string', 'Continent');" +
-                "data.addColumn('number', 'col2');" +
-                String.format("javascript:data.addRows(%s);", json) +
-                "var options = { };" +
-                "var chart = new google.visualization.GeoChart(document.getElementById('dvChart'));" +
-                "chart.draw(data, options);"
+        val json = Gson().toJson(listChartDataToArray(chartData)).substring(1)
+        val json1 = json.substring(0, json.length-1)
+
+        val drawChart = "var data = google.visualization.arrayToDataTable([" +
+                "          ['Country', '$label']," +
+                json1 +
+                "        ]);" +
+                "        var options = {colorAxis: {colors: ['blue']}};" +
+                "        var chart = new google.visualization.GeoChart(document.getElementById('dvChart'));" +
+                "        chart.draw(data, options);"
 
         loadHtml(drawChart)
     }

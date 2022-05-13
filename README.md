@@ -1,4 +1,3 @@
-![Edts Chart](https://i.ibb.co/LCZ0HBL/2022-05-11-11-27-05.jpg)
 ## Setup
 ### Gradle
 
@@ -16,6 +15,29 @@ dependencies {
     implementation 'com.github.edtslib:chart:latest'
 }
 ```
+# GeoView
+
+![GeoView](https://i.ibb.co/nr80L7z/Screen-Shot-2022-05-13-at-13-03-09.png)
+
+### Usage
+```xml
+        <id.co.edtslib.chart.GeoView
+            android:id="@+id/geo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+```
+
+```kotlin
+        val geo = findViewById<GeoView>(R.id.geo)
+        geo.setData("Popularity", listOf(
+            ChartData("Indonesia", 450.0),
+            ChartData("Germany", 1000.0),
+            ChartData("Denmark", 400.0),
+            ChartData("France", 750.0),
+            ChartData("Brazil", 1000.0)))
+```
+
+
 # PieChartView
 
 ### Usage
@@ -57,16 +79,4 @@ dependencies {
             ChartData("ID-JT", 78.0)))
 ```
 
-# GeoView
 
-### Usage
-
-```kotlin
-        val geo = findViewById<GeoView>(R.id.geo)
-        geo.setData(listOf(
-            ChartData("Europe", 580.0),
-            ChartData("Asia", 103.0),
-            ChartData("Africa", 239.0),
-            ChartData("Oceania", 78.0),
-            ChartData("Americas", 78.0)))
-```

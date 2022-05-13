@@ -39,11 +39,11 @@ class MainActivity : AppCompatActivity() {
             ChartData("ID-JT", 78.0)))
 
         val geo = findViewById<GeoView>(R.id.geo)
-        geo.setData(listOf(
-            ChartData("Europe", 580.0),
-            ChartData("Asia", 103.0),
-            ChartData("Africa", 239.0),
-            ChartData("Oceania", 78.0),
-            ChartData("Americas", 78.0)))
+        geo.setData("Popularity", listOf(
+            ChartData("Indonesia", 450.0),
+            ChartData("Germany", 1000.0),
+            ChartData("Denmark", 400.0),
+            ChartData("France", 750.0),
+            ChartData("Brazil", 1000.0)))
     }
 }
