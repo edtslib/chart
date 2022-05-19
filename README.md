@@ -87,3 +87,34 @@ dependencies {
             ChartData("Sep", 8.0),
             ChartData("Oct", 9.0)))
 ```
+# BarChartView
+
+![BarChartView](https://i.ibb.co/k1mcx1M/Screen-Shot-2022-05-19-at-13-54-55.png)
+
+### Usage
+
+```xml
+        <id.co.edtslib.chart.BarChartView
+            android:id="@+id/barChart"
+            app:showLegend="false"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+```
+
+```kotlin
+        val barChart = findViewById<BarChartView>(R.id.barChart)
+        barChart.setData("Data", listOf(
+            ChartData("Feb", 1.0),
+            ChartData("Mar", 2.0),
+            ChartData("Apr", 3.0),
+            ChartData("May", 4.0),
+            ChartData("Jun", 5.0),
+            ChartData("Jul", 6.0),
+            ChartData("Aug", 7.0),
+            ChartData("Sep", 8.0),
+            ChartData("Oct", 9.0)))
+```
+
+
+
+

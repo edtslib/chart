@@ -19,10 +19,15 @@
             android:layout_width="match_parent"
             android:layout_height="300dp" />
         <id.co.edtslib.chart.HorizontalBarChartView
-            android:id="@+id/barChart"
+            android:id="@+id/hBarChart"
             app:showLegend="false"
             android:layout_width="match_parent"
             android:layout_height="400dp" />
+        <id.co.edtslib.chart.BarChartView
+            android:id="@+id/barChart"
+            app:showLegend="false"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
         <id.co.edtslib.chart.PieChartView
             android:id="@+id/pieChart"
             android:layout_width="match_parent"

@@ -30,7 +30,19 @@ class MainActivity : AppCompatActivity() {
             ChartData("ID-BT", 78.0),
             ChartData("ID-JT", 78.0)))
 
-        val barChart = findViewById<HorizontalBarChartView>(R.id.barChart)
+        val hBarChart = findViewById<HorizontalBarChartView>(R.id.hBarChart)
+        hBarChart.setData("Data", listOf(
+            ChartData("Feb", 1.0),
+            ChartData("Mar", 2.0),
+            ChartData("Apr", 3.0),
+            ChartData("May", 4.0),
+            ChartData("Jun", 5.0),
+            ChartData("Jul", 6.0),
+            ChartData("Aug", 7.0),
+            ChartData("Sep", 8.0),
+            ChartData("Oct", 9.0)))
+
+        val barChart = findViewById<BarChartView>(R.id.barChart)
         barChart.setData("Data", listOf(
             ChartData("Feb", 1.0),
             ChartData("Mar", 2.0),
