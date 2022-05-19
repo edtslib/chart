@@ -7,21 +7,43 @@ import android.webkit.WebView
 
 @SuppressLint("SetJavaScriptEnabled")
 abstract class EdtsChartView: WebView {
-    var showLegend = false
+    var showLegend = ""
 
-    constructor(context: Context) : super(context)
-    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+    constructor(context: Context) : super(context) {
+        init (null)
+    }
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
+        init(attrs)
+    }
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
         context,
         attrs,
         defStyleAttr
-    )
+    ) {
+        init(attrs)
+    }
 
-    init {
+
+    private fun init(attrs: AttributeSet?) {
         settings.javaScriptEnabled = true
         settings.domStorageEnabled = true
         settings.useWideViewPort = true
         settings.loadWithOverviewMode = true
+
+        if (attrs != null) {
+            val a = context.theme.obtainStyledAttributes(
+                attrs,
+                R.styleable.EdtsChartView,
+                0, 0
+            )
+
+            val isShowLegend = a.getBoolean(R.styleable.EdtsChartView_showLegend, false)
+            if (! isShowLegend) {
+                showLegend = "legend: 'none',"
+            }
+
+            a.recycle()
+        }
     }
 
     protected fun loadHtml(fDrawChart: String) {
@@ -30,7 +52,7 @@ abstract class EdtsChartView: WebView {
                 "        <meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width\">\n" +
                 "        <script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\n" +
                 "        <script type=\"text/javascript\">\n" +
-                "           google.charts.load('current', {'packages':['corechart', 'geochart']});" +
+                "           google.charts.load('current', {'packages':['corechart', 'geochart', 'bar']});" +
                 "           google.charts.setOnLoadCallback(drawChart);" +
                 "           function drawChart() { " +
                 fDrawChart +

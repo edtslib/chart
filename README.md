@@ -60,33 +60,30 @@ dependencies {
             ChartData("ID-JT", 78.0)))
 ```
 
-# PieChartView
+# HorizontalBarChartView
+
+![HorizontalBarChartView](https://i.ibb.co/sCMdb0P/Screen-Shot-2022-05-19-at-13-44-13.png)
 
 ### Usage
 
-```kotlin
-        val pieChart = findViewById<PieChartView>(R.id.pieChart)
-        pieChart.setData(listOf(
-            ChartData("Mushrooms", 3.0),
-            ChartData("Onions", 1.0),
-            ChartData("Olives", 1.0),
-            ChartData("Zucchini", 1.0),
-            ChartData("Pepperoni", 2.0)))
+```xml
+        <id.co.edtslib.chart.HorizontalBarChartView
+            android:id="@+id/barChart"
+            app:showLegend="false"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
 ```
 
-# DonutChartView
-### Usage
-
 ```kotlin
-        val donutChart = findViewById<PieChartView>(R.id.donutChart)
-        donutChart.setData(listOf(
-            ChartData("Work", 11.0),
-            ChartData("Eat", 2.0),
-            ChartData("Commute", 2.0),
-            ChartData("Watch TV", 2.0),
-            ChartData("Sleep", 7.0)))
+        val barChart = findViewById<HorizontalBarChartView>(R.id.barChart)
+        barChart.setData("Data", listOf(
+            ChartData("Feb", 1.0),
+            ChartData("Mar", 2.0),
+            ChartData("Apr", 3.0),
+            ChartData("May", 4.0),
+            ChartData("Jun", 5.0),
+            ChartData("Jul", 6.0),
+            ChartData("Aug", 7.0),
+            ChartData("Sep", 8.0),
+            ChartData("Oct", 9.0)))
 ```
-
-
-
-
