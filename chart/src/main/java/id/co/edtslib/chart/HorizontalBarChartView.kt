@@ -18,7 +18,7 @@ open class HorizontalBarChartView: EdtsChartView {
         val data = toJson(rowData)
 
         val drawChart = "var data = google.visualization.arrayToDataTable($data);" +
-                "var options = {$showLegend defaultColor: 'red'};" +
+                "var options = {$showLegend defaultColor: 'red', $isStacked};" +
                 "var chart = new google.visualization.BarChart(document.getElementById('dvChart'));" +
                 "chart.draw(data, options);"
 

@@ -9,6 +9,8 @@ import com.google.gson.Gson
 @SuppressLint("SetJavaScriptEnabled")
 abstract class EdtsChartView: WebView {
     var showLegend = ""
+    var isStacked = ""
+
 
     constructor(context: Context) : super(context) {
         init (null)
@@ -41,6 +43,11 @@ abstract class EdtsChartView: WebView {
             val isShowLegend = a.getBoolean(R.styleable.EdtsChartView_showLegend, false)
             if (! isShowLegend) {
                 showLegend = "legend: 'none',"
+            }
+
+            val bIsStacked = a.getBoolean(R.styleable.EdtsChartView_isStacked, false)
+            if (bIsStacked) {
+                isStacked = "isStacked: true,"
             }
 
             a.recycle()

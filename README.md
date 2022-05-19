@@ -63,6 +63,9 @@ dependencies {
 # HorizontalBarChartView
 
 ![HorizontalBarChartView](https://i.ibb.co/sCMdb0P/Screen-Shot-2022-05-19-at-13-44-13.png)
+![HorizontalBarChartView](https://i.ibb.co/GM3wVDT/Screen-Shot-2022-05-19-at-14-52-48.png)
+![HorizontalBarChartView](https://i.ibb.co/N2dFBPn/Screen-Shot-2022-05-19-at-14-54-47.png)
+
 
 ### Usage
 
@@ -70,6 +73,7 @@ dependencies {
         <id.co.edtslib.chart.HorizontalBarChartView
             android:id="@+id/barChart"
             app:showLegend="false"
+            app:isStacked="true"
             android:layout_width="match_parent"
             android:layout_height="400dp" />
 ```
@@ -91,6 +95,8 @@ dependencies {
 # BarChartView
 
 ![BarChartView](https://i.ibb.co/k1mcx1M/Screen-Shot-2022-05-19-at-13-54-55.png)
+![BarChartView](https://i.ibb.co/QKw3R79/Screen-Shot-2022-05-19-at-14-57-06.png)
+![BarChartView](https://i.ibb.co/WV29PXP/Screen-Shot-2022-05-19-at-14-59-48.png)
 
 ### Usage
 
@@ -98,6 +104,7 @@ dependencies {
         <id.co.edtslib.chart.BarChartView
             android:id="@+id/barChart"
             app:showLegend="false"
+            app:isStacked="true"
             android:layout_width="match_parent"
             android:layout_height="400dp" />
 ```

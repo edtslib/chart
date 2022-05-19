@@ -1,5 +1,6 @@
 <resources>
     <declare-styleable name="EdtsChartView">
         <attr name="showLegend" format="boolean" />
+        <attr name="isStacked" format="boolean" />
     </declare-styleable>
 </resources>

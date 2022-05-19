@@ -54,6 +54,15 @@ class MainActivity : AppCompatActivity() {
                 ColumnData("Jul", 6.0),
                 ColumnData("Aug", 7.0),
                 ColumnData("Sep", 8.0),
+                ColumnData("Oct", 9.0))), RowData("Data", listOf(
+                ColumnData("Feb", 1.0),
+                ColumnData("Mar", 2.0),
+                ColumnData("Apr", 3.0),
+                ColumnData("May", 4.0),
+                ColumnData("Jun", 5.0),
+                ColumnData("Jul", 6.0),
+                ColumnData("Aug", 7.0),
+                ColumnData("Sep", 8.0),
                 ColumnData("Oct", 9.0)))))
     }
 }
