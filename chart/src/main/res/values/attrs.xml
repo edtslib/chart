@@ -3,5 +3,6 @@
         <attr name="showLegend" format="boolean" />
         <attr name="isStacked" format="boolean" />
         <attr name="fontSize" format="dimension" />
+        <attr name="hole" format="float" />
     </declare-styleable>
 </resources>

@@ -11,6 +11,7 @@ abstract class EdtsChartView: WebView {
     var showLegend = ""
     var isStacked = ""
     var pieSliceTextStyle = ""
+    var hole = ""
 
 
     constructor(context: Context) : super(context) {
@@ -53,7 +54,12 @@ abstract class EdtsChartView: WebView {
 
             val fontSize = a.getDimension(R.styleable.EdtsChartView_fontSize, 0f)
             if (fontSize > 0f) {
-                pieSliceTextStyle = "pieSliceTextStyle: { fontSize: ${fontSize.toLong()},}"
+                pieSliceTextStyle = "pieSliceTextStyle: { fontSize: ${fontSize.toLong()},}, "
+            }
+
+            val fHole = a.getFloat(R.styleable.EdtsChartView_hole, 0f)
+            if (fHole > 0f) {
+                hole = "pieHole: $fHole, "
             }
 
 

@@ -190,6 +190,7 @@ dependencies {
 # PieChartView
 
 ![PieChartView](https://i.ibb.co/JByKnDC/Screen-Shot-2022-05-19-at-16-12-13.png)
+![PieChartView](https://i.ibb.co/LzQYbYG/Screen-Shot-2022-05-19-at-16-18-29.png)
 
 ### Usage
 

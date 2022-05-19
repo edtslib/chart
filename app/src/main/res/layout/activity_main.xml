@@ -99,6 +99,7 @@
             android:id="@+id/pieChart"
             app:showLegend="true"
             app:fontSize="8px"
+            app:hole="0.4"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>

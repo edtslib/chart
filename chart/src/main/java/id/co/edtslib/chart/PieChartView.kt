@@ -17,7 +17,7 @@ open class PieChartView: EdtsChartView {
         val data = toJson(rowData)
 
         val drawChart = "var data = google.visualization.arrayToDataTable($data);" +
-                "var options = {$showLegend defaultColor: 'red', $isStacked $pieSliceTextStyle};" +
+                "var options = {$showLegend defaultColor: 'red', $isStacked $pieSliceTextStyle $hole};" +
                 "var chart = new google.visualization.PieChart(document.getElementById('dvChart'));" +
                 "chart.draw(data, options);"
 
