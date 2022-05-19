@@ -81,5 +81,14 @@ class MainActivity : AppCompatActivity() {
                 ColumnData("Aug", 9.0),
                 ColumnData("Sep", 8.0),
                 ColumnData("Oct", 9.0)))))
+
+        val pieChart = findViewById<PieChartView>(R.id.pieChart)
+        pieChart.setData(
+            listOf(RowData("Team", listOf(
+                ColumnData("Team A", 44.0),
+                ColumnData("Team B", 55.0),
+                ColumnData("Team C", 13.0),
+                ColumnData("Team D", 43.0),
+                ColumnData("Team E", 22.0)))))
     }
 }

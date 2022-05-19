@@ -14,7 +14,7 @@ class DonutChartView: PieChartView {
     )
 
     init {
-        hole = 0.6
-        fontSize = 7.5
+        //hole = 0.6
+        //fontSize = 7.5
     }
 }

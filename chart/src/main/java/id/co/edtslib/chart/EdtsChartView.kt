@@ -10,6 +10,7 @@ import com.google.gson.Gson
 abstract class EdtsChartView: WebView {
     var showLegend = ""
     var isStacked = ""
+    var pieSliceTextStyle = ""
 
 
     constructor(context: Context) : super(context) {
@@ -49,6 +50,12 @@ abstract class EdtsChartView: WebView {
             if (bIsStacked) {
                 isStacked = "isStacked: true,"
             }
+
+            val fontSize = a.getDimension(R.styleable.EdtsChartView_fontSize, 0f)
+            if (fontSize > 0f) {
+                pieSliceTextStyle = "pieSliceTextStyle: { fontSize: ${fontSize.toLong()},}"
+            }
+
 
             a.recycle()
         }

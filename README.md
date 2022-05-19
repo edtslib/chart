@@ -155,3 +155,60 @@ dependencies {
             ColumnData("Sep", 8.0),
             ColumnData("Oct", 9.0)))))
 ```
+
+# LineChartView
+
+![LineChartView](https://i.ibb.co/DpRZvT5/Screen-Shot-2022-05-19-at-15-54-10.png)
+
+### Usage
+
+```xml
+    <id.co.edtslib.chart.LineChartView
+            android:id="@+id/lineChart"
+            app:showLegend="false"
+            app:isStacked="false"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+```
+
+```kotlin
+    val lineChart = findViewById<LineChartView>(R.id.lineChart)
+        lineChart.setData(
+            listOf(RowData("Data", listOf(
+                ColumnData("Feb", 1.0),
+                ColumnData("Mar", 2.0),
+                ColumnData("Apr", 3.0),
+                ColumnData("May", 4.0),
+                ColumnData("Jun", 3.0),
+                ColumnData("Jul", 6.0),
+                ColumnData("Aug", 9.0),
+                ColumnData("Sep", 8.0),
+                ColumnData("Oct", 9.0)))))
+```
+
+
+# PieChartView
+
+![PieChartView](https://i.ibb.co/JByKnDC/Screen-Shot-2022-05-19-at-16-12-13.png)
+
+### Usage
+
+```xml
+    <id.co.edtslib.chart.PieChartView
+            android:id="@+id/pieChart"
+            app:showLegend="true"
+            app:fontSize="8px"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+```
+
+```kotlin
+    val pieChart = findViewById<PieChartView>(R.id.pieChart)
+        pieChart.setData(
+            listOf(RowData("Team", listOf(
+                ColumnData("Team A", 44.0),
+                ColumnData("Team B", 55.0),
+                ColumnData("Team C", 13.0),
+                ColumnData("Team D", 43.0),
+                ColumnData("Team E", 22.0)))))
+```
