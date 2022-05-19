@@ -127,6 +127,8 @@ dependencies {
 # AreaChartView
 
 ![AreaChartView](https://i.ibb.co/MB5DDhP/Screen-Shot-2022-05-19-at-15-08-28.png)
+![AreaChartView](https://i.ibb.co/hcPnmgx/Screen-Shot-2022-05-19-at-15-44-57.png)
+![AreaChartView](https://i.ibb.co/mSk73hy/Screen-Shot-2022-05-19-at-15-47-39.png)
 
 ### Usage
 
