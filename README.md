@@ -75,17 +75,18 @@ dependencies {
 ```
 
 ```kotlin
-        val barChart = findViewById<HorizontalBarChartView>(R.id.barChart)
-        barChart.setData("Data", listOf(
-            ChartData("Feb", 1.0),
-            ChartData("Mar", 2.0),
-            ChartData("Apr", 3.0),
-            ChartData("May", 4.0),
-            ChartData("Jun", 5.0),
-            ChartData("Jul", 6.0),
-            ChartData("Aug", 7.0),
-            ChartData("Sep", 8.0),
-            ChartData("Oct", 9.0)))
+        val hBarChart = findViewById<HorizontalBarChartView>(R.id.hBarChart)
+        hBarChart.setData(
+            listOf(RowData("Data", listOf(
+            ColumnData("Feb", 1.0),
+            ColumnData("Mar", 2.0),
+            ColumnData("Apr", 3.0),
+            ColumnData("May", 4.0),
+            ColumnData("Jun", 5.0),
+            ColumnData("Jul", 6.0),
+            ColumnData("Aug", 7.0),
+            ColumnData("Sep", 8.0),
+            ColumnData("Oct", 9.0)))))
 ```
 # BarChartView
 
@@ -102,19 +103,16 @@ dependencies {
 ```
 
 ```kotlin
-        val barChart = findViewById<BarChartView>(R.id.barChart)
-        barChart.setData("Data", listOf(
-            ChartData("Feb", 1.0),
-            ChartData("Mar", 2.0),
-            ChartData("Apr", 3.0),
-            ChartData("May", 4.0),
-            ChartData("Jun", 5.0),
-            ChartData("Jul", 6.0),
-            ChartData("Aug", 7.0),
-            ChartData("Sep", 8.0),
-            ChartData("Oct", 9.0)))
+val barChart = findViewById<BarChartView>(R.id.barChart)
+        barChart.setData(
+            listOf(RowData("Data", listOf(
+                ColumnData("Feb", 1.0),
+                ColumnData("Mar", 2.0),
+                ColumnData("Apr", 3.0),
+                ColumnData("May", 4.0),
+                ColumnData("Jun", 5.0),
+                ColumnData("Jul", 6.0),
+                ColumnData("Aug", 7.0),
+                ColumnData("Sep", 8.0),
+                ColumnData("Oct", 9.0)))))
 ```
-
-
-
-

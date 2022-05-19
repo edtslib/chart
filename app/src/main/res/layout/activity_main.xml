@@ -10,30 +10,57 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <TextView
+            android:text="GeoView"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <id.co.edtslib.chart.GeoView
             android:id="@+id/geo"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
+        <TextView
+            android:text="GeoIDView"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <id.co.edtslib.chart.GeoIDView
             android:id="@+id/geoId"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
+        <TextView
+            android:text="HorizontalBarChartView"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <id.co.edtslib.chart.HorizontalBarChartView
             android:id="@+id/hBarChart"
             app:showLegend="false"
             android:layout_width="match_parent"
             android:layout_height="400dp" />
+        <TextView
+            android:text="BarChartView"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <id.co.edtslib.chart.BarChartView
             android:id="@+id/barChart"
             app:showLegend="false"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
-        <id.co.edtslib.chart.PieChartView
-            android:id="@+id/pieChart"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
-        <id.co.edtslib.chart.DonutChartView
-            android:id="@+id/donutChart"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>

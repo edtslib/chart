@@ -16,11 +16,11 @@ open class PieChartView: EdtsChartView {
         defStyleAttr
     )
 
-    fun setData(chartData: List<ChartData>) {
+    fun setData(columnData: List<ColumnData>) {
         val sHole = "pieHole: $hole,"
         val sFontSize = if (fontSize == 0.0) "" else "pieSliceTextStyle: { fontSize: $fontSize,}"
 
-        val json = Gson().toJson(listChartDataToArray(chartData))
+        val json = Gson().toJson(listChartDataToArray(columnData))
         val drawChart = "" +
                 "var data = new google.visualization.DataTable();" +
                 "data.addColumn('string', 'col1');" +

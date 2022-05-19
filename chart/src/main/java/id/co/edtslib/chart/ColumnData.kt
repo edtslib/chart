@@ -1,6 +1,6 @@
 package id.co.edtslib.chart
 
-data class ChartData(
+data class ColumnData(
     val text: String,
     val value: Double
 )

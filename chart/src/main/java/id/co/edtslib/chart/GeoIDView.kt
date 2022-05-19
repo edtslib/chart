@@ -13,9 +13,9 @@ open class GeoIDView: EdtsChartView {
         defStyleAttr
     )
 
-    fun setData(label: String, chartData: List<ChartData>) {
+    fun setData(label: String, columnData: List<ColumnData>) {
 
-        val json = Gson().toJson(listChartDataToArray(chartData)).substring(1)
+        val json = Gson().toJson(listChartDataToArray(columnData)).substring(1)
         val json1 = json.substring(0, json.length-1)
 
         val drawChart = "var data = google.visualization.arrayToDataTable([" +

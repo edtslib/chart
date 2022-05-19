@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.webkit.WebView
+import com.google.gson.Gson
 
 @SuppressLint("SetJavaScriptEnabled")
 abstract class EdtsChartView: WebView {
@@ -65,7 +66,7 @@ abstract class EdtsChartView: WebView {
 
     }
 
-    protected fun listChartDataToArray(list: List<ChartData>): List<List<Any>> {
+    protected fun listChartDataToArray(list: List<ColumnData>): List<List<Any>> {
         val mutableList = mutableListOf<List<Any>>()
 
         for (item in list) {
@@ -75,5 +76,39 @@ abstract class EdtsChartView: WebView {
 
         return mutableList.toList()
 
+    }
+
+    protected fun toJson(rowData: List<RowData>): String {
+        val arr = mutableListOf<MutableList<Any>>()
+
+        val row1 = mutableListOf<Any>("")
+        for (row in rowData) {
+            row1.add(row.label)
+        }
+        arr.add(row1)
+
+        val map = mutableMapOf<String, MutableList<Double>>()
+        for (row in rowData) {
+            for (col in row.columns) {
+                var ds = map[col.text]
+                if (ds == null) {
+                    ds = mutableListOf<Double>()
+                    map[col.text] = ds
+                }
+
+                ds.add(col.value)
+            }
+        }
+
+        for ((key, value) in map) {
+            val row = mutableListOf<Any>(key)
+            row.addAll(value)
+
+            arr.add(row)
+        }
+
+        val json = Gson().toJson(arr)
+
+        return json
     }
 }
