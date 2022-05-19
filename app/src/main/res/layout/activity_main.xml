@@ -65,5 +65,20 @@
             app:isStacked="true"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
+        <TextView
+            android:text="AreaChartView"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <id.co.edtslib.chart.AreaChartView
+            android:id="@+id/areaChart"
+            app:showLegend="false"
+            app:isStacked="true"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>

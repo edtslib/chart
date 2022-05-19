@@ -21,15 +21,15 @@ dependencies {
 
 ### Usage
 ```xml
-        <id.co.edtslib.chart.GeoView
-            android:id="@+id/geo"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
+    <id.co.edtslib.chart.GeoView
+        android:id="@+id/geo"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
 ```
 
 ```kotlin
-        val geo = findViewById<GeoView>(R.id.geo)
-        geo.setData("Popularity", listOf(
+    val geo = findViewById<GeoView>(R.id.geo)
+    geo.setData("Popularity", listOf(
             ChartData("Indonesia", 450.0),
             ChartData("Germany", 1000.0),
             ChartData("Denmark", 400.0),
@@ -44,15 +44,15 @@ dependencies {
 ### Usage
 
 ```xml
-        <id.co.edtslib.chart.GeoIDView
-            android:id="@+id/geoId"
-            android:layout_width="match_parent"
-            android:layout_height="300dp" />
+    <id.co.edtslib.chart.GeoIDView
+        android:id="@+id/geoId"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
 ```
 
 ```kotlin
-       val geoId = findViewById<GeoIDView>(R.id.geoId)
-        geoId.setData("Popularity", listOf(
+    val geoId = findViewById<GeoIDView>(R.id.geoId)
+    geoId.setData("Popularity", listOf(
             ChartData("ID-JK", 580.0),
             ChartData("ID-BA", 103.0),
             ChartData("ID-JB", 239.0),
@@ -70,17 +70,17 @@ dependencies {
 ### Usage
 
 ```xml
-        <id.co.edtslib.chart.HorizontalBarChartView
-            android:id="@+id/barChart"
-            app:showLegend="false"
-            app:isStacked="true"
-            android:layout_width="match_parent"
-            android:layout_height="400dp" />
+    <id.co.edtslib.chart.HorizontalBarChartView
+        android:id="@+id/barChart"
+        app:showLegend="false"
+        app:isStacked="true"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
 ```
 
 ```kotlin
-        val hBarChart = findViewById<HorizontalBarChartView>(R.id.hBarChart)
-        hBarChart.setData(
+    val hBarChart = findViewById<HorizontalBarChartView>(R.id.hBarChart)
+    hBarChart.setData(
             listOf(RowData("Data", listOf(
             ColumnData("Feb", 1.0),
             ColumnData("Mar", 2.0),
@@ -101,17 +101,17 @@ dependencies {
 ### Usage
 
 ```xml
-        <id.co.edtslib.chart.BarChartView
-            android:id="@+id/barChart"
-            app:showLegend="false"
-            app:isStacked="true"
-            android:layout_width="match_parent"
-            android:layout_height="400dp" />
+    <id.co.edtslib.chart.BarChartView
+        android:id="@+id/barChart"
+        app:showLegend="false"
+        app:isStacked="true"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
 ```
 
 ```kotlin
-val barChart = findViewById<BarChartView>(R.id.barChart)
-        barChart.setData(
+    val barChart = findViewById<BarChartView>(R.id.barChart)
+    barChart.setData(
             listOf(RowData("Data", listOf(
                 ColumnData("Feb", 1.0),
                 ColumnData("Mar", 2.0),
@@ -122,4 +122,34 @@ val barChart = findViewById<BarChartView>(R.id.barChart)
                 ColumnData("Aug", 7.0),
                 ColumnData("Sep", 8.0),
                 ColumnData("Oct", 9.0)))))
+```
+
+# AreaChartView
+
+![AreaChartView](https://i.ibb.co/MB5DDhP/Screen-Shot-2022-05-19-at-15-08-28.png)
+
+### Usage
+
+```xml
+    <id.co.edtslib.chart.AreaChartView
+        android:id="@+id/areaChart"
+        app:showLegend="false"
+        app:isStacked="true"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+```
+
+```kotlin
+    val areaChart = findViewById<AreaChartView>(R.id.areaChart)
+    areaChart.setData(
+        listOf(RowData("Data", listOf(
+            ColumnData("Feb", 1.0),
+            ColumnData("Mar", 2.0),
+            ColumnData("Apr", 3.0),
+            ColumnData("May", 4.0),
+            ColumnData("Jun", 3.0),
+            ColumnData("Jul", 6.0),
+            ColumnData("Aug", 9.0),
+            ColumnData("Sep", 8.0),
+            ColumnData("Oct", 9.0)))))
 ```
