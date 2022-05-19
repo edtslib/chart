@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         val areaChart = findViewById<AreaChartView>(R.id.areaChart)
         areaChart.setData(
-            listOf(RowData("Data 1", listOf(
+            listOf(RowData("Data", listOf(
                 ColumnData("Feb", 1.0),
                 ColumnData("Mar", 2.0),
                 ColumnData("Apr", 3.0),
@@ -67,15 +67,19 @@ class MainActivity : AppCompatActivity() {
                 ColumnData("Jul", 6.0),
                 ColumnData("Aug", 7.0),
                 ColumnData("Sep", 8.0),
-                ColumnData("Oct", 9.0))), RowData("Data 2", listOf(
-                ColumnData("Feb", 2.0),
-                ColumnData("Mar", 3.0),
+                ColumnData("Oct", 9.0)))))
+
+        val lineChart = findViewById<LineChartView>(R.id.lineChart)
+        lineChart.setData(
+            listOf(RowData("Data", listOf(
+                ColumnData("Feb", 1.0),
+                ColumnData("Mar", 2.0),
                 ColumnData("Apr", 3.0),
-                ColumnData("May", -4.0),
-                ColumnData("Jun", -5.0),
-                ColumnData("Jul", -5.0),
-                ColumnData("Aug", -7.0),
-                ColumnData("Sep", 5.0),
-                ColumnData("Oct", 10.0)))))
+                ColumnData("May", 4.0),
+                ColumnData("Jun", 3.0),
+                ColumnData("Jul", 6.0),
+                ColumnData("Aug", 9.0),
+                ColumnData("Sep", 8.0),
+                ColumnData("Oct", 9.0)))))
     }
 }
