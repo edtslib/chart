@@ -217,6 +217,7 @@ dependencies {
 # TreeMapChartView
 
 ![TreeMapChartView](https://i.ibb.co/mXjZH72/Screen-Shot-2022-05-20-at-13-58-51.png)
+![TreeMapChartView](https://i.ibb.co/YQxHfdP/Screen-Shot-2022-05-20-at-14-16-19.png)
 
 ### Usage
 
