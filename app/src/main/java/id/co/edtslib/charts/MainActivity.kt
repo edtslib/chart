@@ -90,5 +90,16 @@ class MainActivity : AppCompatActivity() {
                 ColumnData("Team C", 13.0),
                 ColumnData("Team D", 43.0),
                 ColumnData("Team E", 22.0)))))
+
+        val treeMap = findViewById<TreeMapView>(R.id.treeMap)
+        treeMap.setData(
+            listOf(RowData("Indonesia", listOf(
+                ColumnData("Jawa Tengah", 218.0),
+                ColumnData("Jawa Barat", 149.0),
+                ColumnData("Jawa Timur", 184.0),
+                ColumnData("DKI Jakarta", 123.0),
+                ColumnData("Bali", 350.0)))))
+
+
     }
 }

@@ -213,3 +213,27 @@ dependencies {
                 ColumnData("Team D", 43.0),
                 ColumnData("Team E", 22.0)))))
 ```
+
+# TreeMapChartView
+
+![TreeMapChartView](https://i.ibb.co/mXjZH72/Screen-Shot-2022-05-20-at-13-58-51.png)
+
+### Usage
+
+```xml
+    <id.co.edtslib.chart.TreeMapView
+        android:id="@+id/treeMap"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+```
+
+```kotlin
+    val treeMap = findViewById<TreeMapView>(R.id.treeMap)
+        treeMap.setData(
+            listOf(RowData("Indonesia", listOf(
+                ColumnData("Jawa Tengah", 218.0),
+                ColumnData("Jawa Barat", 149.0),
+                ColumnData("Jawa Timur", 184.0),
+                ColumnData("DKI Jakarta", 123.0),
+                ColumnData("Bali", 350.0)))))
+```

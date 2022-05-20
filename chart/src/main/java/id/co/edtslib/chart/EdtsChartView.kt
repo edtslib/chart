@@ -73,7 +73,7 @@ abstract class EdtsChartView: WebView {
                 "        <meta name=\"viewport\" content=\"initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width\">\n" +
                 "        <script type=\"text/javascript\" src=\"https://www.gstatic.com/charts/loader.js\"></script>\n" +
                 "        <script type=\"text/javascript\">\n" +
-                "           google.charts.load('current', {'packages':['corechart', 'geochart', 'bar']});" +
+                "           google.charts.load('current', {'packages':['corechart', 'geochart', 'bar', 'treemap']});" +
                 "           google.charts.setOnLoadCallback(drawChart);" +
                 "           function drawChart() { " +
                 fDrawChart +
@@ -98,7 +98,7 @@ abstract class EdtsChartView: WebView {
 
     }
 
-    protected fun toJson(rowData: List<RowData>): String {
+    protected open fun toJson(rowData: List<RowData>): String {
         val arr = mutableListOf<MutableList<Any>>()
 
         val row1 = mutableListOf<Any>("")
